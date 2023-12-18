@@ -10,18 +10,20 @@
     font-family: Lekton;
     src: url("../fonts/Lekton-Regular.ttf");
 }
+body{
+    min-width: 360px;
+}
+.maxwidth{
+    max-width: 1440px;
+    align-self: center;
+}
 /* header */
+
 .top{
     background: #982417;
     text-align: center;
-    height: 176px;
-    width: 100vw;
     
 }
-.top__logo{
-    height: 108px;
-}
-
 .menu__itens {
     display: flex;
     justify-content: center;
@@ -44,47 +46,46 @@
 .menu__link:hover{
     border-bottom: 8px solid #FFF0D1;
 }
-.checkbox, .menu__hamb input {
+.checkbox, .menu__hamb{
     display: none;
 }
-
 /* BANNER */
 
 .main__banner{
     background-image: url("../assets/banner_Dsk.png");
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
     display: flex;
-    width: 100vw;
     height: 528px;
     padding: 10px 0px;
     justify-content: flex-end;
     align-items: center;
+    flex-wrap: wrap;
     gap: 10px;  
 
 }
 .banner__caixa{
+    background: #ffffffe6;
     display: flex;
-    width: 589px;
-    height: 237px;
-    padding: 32px 48px 32px 16px;
     flex-direction: column;
+    gap: 26px;
+    padding: 32px 48px 32px 16px;
+    width: 589px;
     align-items: flex-end;
-    gap: 50px;
-    background: rgba(255, 255, 255, 0.90);
+    justify-content: center;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
-.banner__caixa h1{
-    /* color: #000; */
+.banner__caixa h1{ 
     font-family: Lekton;
     font-size: 40px;
     font-weight: 700;
 }
 .banner__caixa p{
     color: #000;
-font-family: Inria Sans;
-font-size: 28px;
-font-weight: 400;
+    font-family: Inria Sans;
+    font-size: 28px;
+    font-weight: 400;
 }
 .banner__caixa span{
     color: #982417;
@@ -104,7 +105,7 @@ font-weight: 400;
     justify-content: center;
     align-items: center;
     border-radius: 6px;
-    border: 1px solid var(--Laranja, #FF9C2D);
+    border: 1px solid #FF9C2D;
     box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.25);
 }
 .btn__more a{
@@ -125,18 +126,19 @@ font-weight: 400;
 }
 .btn__interest a{
     color: #000;
+    text-decoration: none;
     font-family: Inria Sans;
     font-weight: 400;
 }
 .main__benefits{
     display: flex;
-    width: 1440;
-    height: 360px;
     padding: 32px;
     flex-direction: column;
     align-items: center;
     gap: 16px;
     background:  #FFF0D1;
+    flex-wrap: wrap;
+    justify-content: flex-start;
 }
 .benefits__txt{
     display: flex;
@@ -155,13 +157,12 @@ font-weight: 400;
 .benefits__cards{
     display: flex;
     justify-content: center;
-    align-items: center;
     gap: 89px;
-    align-self: stretch;
+    flex-wrap: wrap;
 }
 .card{
     display: flex;
-    width: 300px;
+    max-width: 300px;
     padding: 32px 16px;
     flex-direction: column;
     align-items: center;
@@ -170,7 +171,6 @@ font-weight: 400;
 }
 .card img{
     width: 96px;
-    height: 96px;
     border: 1px solid #FF9C2D;
 }
 .card h3{
@@ -191,6 +191,7 @@ font-weight: 400;
     align-items: center;
     gap: 16px;
     background-color: #000;
+    flex-wrap: wrap;
 }
 .depoimentos__titulo{
     display: flex;
@@ -211,7 +212,6 @@ font-weight: 400;
     justify-content: center;
     align-items: center;
     gap: 128px;
-    align-self: stretch;
 }
 .depoimentos__txt{
     display: flex;
@@ -220,8 +220,6 @@ font-weight: 400;
     justify-content: flex-end;
     align-items: flex-start;
     gap: 16px;
-    flex: 1 0 0;
-
 }
 .txt{
     color: #FFF;
@@ -229,7 +227,8 @@ font-weight: 400;
     font-size: 20px;
     font-style: italic;
     font-weight: 400;
-    line-height: 25px; /* 125% */
+    line-height: 25px;
+    padding-bottom: 25px;
 }
 .name{
     color: #FFF;
@@ -254,6 +253,12 @@ font-weight: 400;
     flex-direction: column;
     align-items: flex-start;
     gap: 16px;
+    flex-wrap: wrap;
+}
+.modelos__card{
+    display: flex;
+    padding: 16px;
+    flex-direction: column;
 }
 .negocio__titulo{
     display: flex;
@@ -274,7 +279,8 @@ font-weight: 400;
     justify-content: center;
     align-items: center;
     gap: 64px;
-    align-self: stretch;
+    align-self: center;
+    flex-wrap: wrap;
 }
 .modelo__card{
     display: flex;
@@ -291,19 +297,24 @@ font-weight: 400;
     background:#982417;
     
 }
+.card__imgmob{
+    display: none;
+}
+.card__img{
+    display: block;
+}
 .modelo__ambiente h3{
     color: #FFF;
     font-family: Lekton;
     font-size: 32px;
     font-weight: 700;
-    margin-bottom: 24px;
 }
 .modelo__txt ul{
     display: flex;
     flex-direction: column;
-    padding-left: 24px;
     list-style-type: disc;
     gap: 24px;
+    padding: 16px 0 16px 24px;
 }
 
 .modelo__txt{
@@ -311,4 +322,125 @@ font-weight: 400;
     font-family: Inria Sans;
     font-size: 20px;
     font-weight: 400;
+}
+
+/* footer */
+
+.footer{
+    display: flex;
+    padding: 10px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #982417;
+    gap: 32px;
+    flex-wrap: wrap;
+}
+
+.footer__contatos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 128px;
+    flex-wrap: wrap;
+}
+.contatos__redes{
+    display: flex;
+    gap: 32px;
+}
+.contatos__telefone{
+    display: flex;
+    gap: 16px;
+}
+.redes__txt, .telefone__txt, .footer__desenvolvedor{
+    font-family: Just Me Again Down Here;
+    font-size: 24px;
+    color: #FFF0D1;
+    font-weight: 400;
+}
+.redes__icone, .telefone__icone{
+    width: 32px;
+}
+
+@media screen and (max-width:768px){
+    .top{
+       display: flex;
+       flex-direction: row-reverse;
+       justify-content: space-between;
+       padding: 0px 16px;
+       align-items: center;
+    }
+    .menu__hamb{
+        display: block;
+    }
+    .menu__itens{
+        display: none;
+    }
+    .fa-bars{
+        font-size: 50px;
+        color: #FFF0D1;
+    }
+    .main__banner{
+        align-items: flex-end;
+        padding: 0;
+        background-size: auto 60%;
+        background-repeat: repeat-y;
+        background-position: top center;
+    }
+    .banner__caixa{
+        background-color: #fff;
+        box-shadow: none;
+        gap: 8px;
+        padding: 32px 16px;
+    }
+    .banner__caixa h1{ 
+        font-size: 36px;
+        text-align: right;
+    }
+    .banner__caixa p, .banner__caixa span{
+        font-size: 20px;
+        text-align: right;
+    }
+    .benefits__cards{
+        gap: 16px;
+    }
+    .benefits__txt, .negocio__titulo, .depoimentos__titulo{
+        border: none;
+        display: flex;
+        justify-content: center;
+    }
+    .benefits__txt h2, .negocio__titulo h2, .depoimentos__titulo h2{
+        font-size: 24px;
+    }
+    .depoimentos__img{
+        display: none;
+    }
+    .main__negocio{
+        padding: 16px 0px;
+    }
+    .card__img{
+        display: none;
+    }
+    .card__imgmob{
+        display: block;
+    }
+    .negocio__modelos{
+        gap: 16px;
+    }
+    .footer__contatos{
+        flex-direction: column;
+        gap: 16px;
+    }
+    .contatos__redes, .contatos__telefone {
+        gap: 8px;
+    }
+    .redes__txt, .telefone__txt{
+        font-size: 20px;
+    }
+    .footer__desenvolvedor{
+        font-size: 16px;
+    }
+    .redes__icone, .telefone__icone{
+        width: 24px;
+    }
 }
